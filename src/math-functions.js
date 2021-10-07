@@ -82,8 +82,20 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+//0. write a function called sumArrayWithThreeNumbers() that takes in an array of numbers as its single argument
+//1. and then returns an array where 
+//2. the first element is the sum of the numbers in the array, and
+//3. the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+//   "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
+export function sumArrayWithThreeNumbers(sumArr) {
+    const a = sumArr[0];
+    const b = sumArr[1];
+    const c = sumArr[2];
+    const abSum = sum(a, b)[0];
+    const sumArray = sum(abSum, c)[0];
+    const str = `${a},${b},${c} was passed in as an array of numbers, and ${sumArray} is their sum.`;
+    return [sumArray, str];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
